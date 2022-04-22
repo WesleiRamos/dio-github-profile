@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/layout'
+import NoUser from './components/no-user'
+import Profile from './components/profile'
+import useGithub from './hooks/github-hooks'
+import Repositories from './components/repositories'
 
-function App() {
+const App = (): JSX.Element => {
+  const { githubState } = useGithub()
+
+  const renderUserProfile = (): JSX.Element => {
+    if (!githubState.hasUser)
+      return <NoUser />
+
+    if (githubState.loading)
+      return <p>Loading...</p>
+
+    return (
+      <>
+        <Profile />
+        <Repositories />
+      </>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      {renderUserProfile()}
+    </Layout>
+  )
 }
 
-export default App;
+export default App
+
