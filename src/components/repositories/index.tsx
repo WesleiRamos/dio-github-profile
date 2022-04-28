@@ -8,7 +8,7 @@ const renderRepositoryItem = (repository: GithubRepository) => (
   <RepositoryItem key={repository.id} {...repository} />
 )
 
-const rendererRepositories = () => {
+const RendererRepositories = () => {
   const { githubState } = useGithub()
   return (
     <>
@@ -17,7 +17,7 @@ const rendererRepositories = () => {
   )
 }
 
-const rendererStarred = () => {
+const RendererStarred = () => {
   const { githubState } = useGithub()
   return (
     <>
@@ -27,8 +27,8 @@ const rendererStarred = () => {
 }
 
 const tabs = [
-  { name: 'Repositories', renderer: rendererRepositories },
-  { name: 'Starred', renderer: rendererStarred }
+  { name: 'Repositories', renderer: RendererRepositories },
+  { name: 'Starred', renderer: RendererStarred }
 ]
 
 const Repositories = () => {
