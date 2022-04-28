@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is the final project of module IV of DIO's Spread FullStack Developer bootcamp.
 
-It's an app to view a github profile written using, it was Typescript and Styled-Components.
+It's an app to view a github profile, it was written using Typescript and Styled-Components.
 
 ### Features
 
