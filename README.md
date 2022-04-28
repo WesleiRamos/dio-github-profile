@@ -1,12 +1,11 @@
-# Getting Started with Create React App
+# Github Profile App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## About project
+[DEMO](https://wesleiramos.github.io/dio-github-profile)
 
 This is the final project of module IV of DIO's Spread FullStack Developer bootcamp.
 
 It's an app to view a github profile, it was written using Typescript and Styled-Components.
+
 
 ### Features
 
